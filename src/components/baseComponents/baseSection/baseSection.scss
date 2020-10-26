@@ -1,0 +1,46 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+.base-section {
+  display: flex;
+  flex-direction: column;
+  justify-items: stretch;
+  border-bottom: 1px dashed rgba(0, 0, 0, 0.15);
+
+  @include on-sm-and-down {
+    border-bottom: none;
+  }
+
+  &__container-full-width {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  &__container {
+    max-width: $section-content-max-width;
+    width: 100%;
+    margin: 0 auto;
+    padding: 90px;
+
+    @include on-sm-and-down {
+      padding: 60px;
+    }
+
+    @include on-xs-only {
+      padding: 30px;
+    }
+
+    &__title {
+      text-align: center;
+      padding: 0 30px;
+    }
+
+    &__content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 100%;
+    }
+  }
+}

@@ -1,0 +1,5 @@
+export * from './IServiceCard'
+export * from './IService'
+export * from './ISlideImage'
+export * from './IFooter'
+export * from './IContent'

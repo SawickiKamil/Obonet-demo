@@ -1,0 +1,13 @@
+@import '../../../../styles/variables';
+
+.footer-info__social-media {
+  padding: 5px;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.9);
+
+  &__website-rights {
+    font-size: 0.9rem;
+    color: #fff;
+    text-align: center;
+  }
+}

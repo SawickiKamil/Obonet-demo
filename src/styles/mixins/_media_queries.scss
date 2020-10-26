@@ -1,0 +1,19 @@
+@import '../variables';
+
+@mixin on-xs-only {
+  @media screen and (max-width: map-get($breakpoints, 'sm') - 1px) {
+    @content;
+  }
+}
+
+@mixin on-sm-and-up {
+  @media screen and (min-width: map-get($breakpoints, 'sm')) {
+    @content;
+  }
+}
+
+@mixin on-sm-and-down {
+  @media screen and (max-width: map-get($breakpoints, 'md') - 1px) {
+    @content;
+  }
+}

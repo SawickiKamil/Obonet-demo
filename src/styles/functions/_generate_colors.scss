@@ -1,0 +1,17 @@
+@function generateColor($baseColor) {
+  $colors: (
+    'base': $baseColor,
+    'lighten-1': mix($baseColor, white, 20%),
+    'lighten-2': mix($baseColor, white, 40%),
+    'lighten-3': mix($baseColor, white, 60%),
+    'lighten-4': mix($baseColor, white, 80%),
+    'lighten-5': mix($baseColor, white, 90%),
+    'darken-1': mix($baseColor, black, 20%),
+    'darken-2': mix($baseColor, black, 40%),
+    'darken-3': mix($baseColor, black, 60%),
+    'darken-4': mix($baseColor, black, 80%),
+    'darken-5': mix($baseColor, black, 90%),
+  );
+
+  @return $colors;
+}

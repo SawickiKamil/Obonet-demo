@@ -1,0 +1,12 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+.service-description {
+  h1 {
+    @include on-sm-and-down {
+      br {
+        display: none;
+      }
+    }
+  }
+}

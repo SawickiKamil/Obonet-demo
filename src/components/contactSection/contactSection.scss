@@ -1,0 +1,24 @@
+@import '../../styles/mixins';
+
+.map-section {
+  padding-top: 90px;
+
+  @include on-sm-and-down {
+    padding-top: 60px;
+  }
+
+  @include on-xs-only {
+    padding-top: 30px;
+  }
+
+  &__wrapper {
+    width: 100%;
+  }
+}
+
+.map {
+  z-index: 1;
+  display: flex;
+  max-width: 100%;
+  box-sizing: border-box;
+}

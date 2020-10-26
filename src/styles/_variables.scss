@@ -1,0 +1,20 @@
+@import 'functions';
+$section-content-max-width: 1440px;
+
+// $color-secondary: #93979a;
+// $color-dark: #323232;
+
+// def
+$colors: (
+  'grey': generateColor(#93979a),
+  'primary': generateColor(#d9aa01),
+);
+
+// read
+
+// map-deep-get($colors, 'primary', 'base');
+
+$breakpoints: (
+  'sm': 640px,
+  'md': 1024px,
+);

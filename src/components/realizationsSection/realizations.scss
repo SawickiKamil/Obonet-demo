@@ -1,0 +1,15 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.realizations {
+  max-width: $section-content-max-width;
+  width: 100%;
+  margin: 0 auto;
+  padding: 90px;
+  @include on-sm-and-down {
+    padding: 60px;
+  }
+  @include on-xs-only {
+    padding: 30px 0;
+  }
+}

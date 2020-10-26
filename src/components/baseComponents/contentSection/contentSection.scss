@@ -1,0 +1,99 @@
+@import '../../../styles/mixins';
+
+.contentSection {
+  height: 100%;
+  justify-content: center;
+}
+
+.about {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+
+  &--reverse {
+    @extend .about;
+    flex-direction: row-reverse;
+  }
+
+  @include on-sm-and-down {
+    flex-direction: column-reverse;
+    margin: 0 -60px;
+  }
+
+  @include on-xs-only {
+    margin: 0 -30px;
+  }
+
+  &__left-container {
+    width: 50%;
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+
+    @include on-sm-and-down {
+      height: 300px;
+      width: 100%;
+    }
+
+    @include on-xs-only {
+      height: 200px;
+    }
+
+    &--reverse {
+      @extend .about__left-container;
+      justify-content: flex-end;
+    }
+
+    img {
+      width: 70%;
+      min-width: 350px;
+      border-radius: 50%;
+      padding-right: -60px;
+
+      @include on-sm-and-down {
+        min-width: 0;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+        object-fit: cover;
+        padding-right: 0;
+      }
+    }
+  }
+
+  &__right-container {
+    width: 50%;
+
+    @include on-sm-and-down {
+      width: 100%;
+    }
+
+    .paragraph {
+      text-align: start;
+
+      @include on-sm-and-down {
+        margin: 1rem 60px;
+        text-align: start;
+      }
+
+      @include on-xs-only {
+        margin: 1rem 30px;
+      }
+    }
+
+    .title {
+      text-align: start;
+
+      @include on-sm-and-down {
+        margin: 1.2rem 60px;
+        text-align: start;
+      }
+
+      @include on-xs-only {
+        margin: 1rem 30px;
+      }
+    }
+  }
+}

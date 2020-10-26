@@ -1,0 +1,67 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+.footer-company-data {
+  min-height: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 30px;
+
+  &__container {
+    max-width: $section-content-max-width;
+    flex: 1 1 auto;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+
+    h2 {
+      margin-bottom: 16px;
+    }
+  }
+}
+
+.company-element {
+  flex: 1 1 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__icons {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  h2 {
+    color: map-deep-get($colors, 'primary', 'lighten-5');
+    font-size: 1.3rem;
+  }
+  p {
+    color: white;
+    margin-bottom: 0;
+  }
+
+  a {
+    color: white;
+    margin-bottom: 0;
+    text-decoration: none;
+    margin: 0.5rem 0;
+  }
+
+  @include on-sm-and-up {
+    flex-basis: 33%;
+  }
+
+  @include on-sm-and-down {
+    flex-basis: 50%;
+    margin-top: 2rem;
+  }
+
+  @include on-xs-only {
+    flex-basis: 100%;
+  }
+}
+
+.link {
+  color: #fff;
+  font-size: 24px;
+}
